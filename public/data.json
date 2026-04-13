@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Hasan",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "arif.hasan@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["university", "close friend"],
+    "bio": "We studied Computer Science together at university. Used to code late nights and still shares programming ideas.",
+    "goal": 14,
+    "next_due_date": "2026-03-25"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nusrat.jahan@gmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["school", "best friend"],
+    "bio": "Childhood friend from school. We still talk about life goals and family updates regularly.",
+    "goal": 12,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 3,
+    "name": "Mahmudul Karim",
+    "picture": "https://randomuser.me/api/portraits/men/65.jpg",
+    "email": "mahmud.karim@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["office", "colleague"],
+    "bio": "Works with me in a software company. We often collaborate on backend projects and tech discussions.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  },
+  {
+    "id": 4,
+    "name": "Sadia Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "sadia.rahman@gmail.com",
+    "days_since_contact": 21,
+    "status": "overdue",
+    "tags": ["university", "friend"],
+    "bio": "Met during university events. Loves photography and often shares her travel experiences.",
+    "goal": 14,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 5,
+    "name": "Tanvir Ahmed",
+    "picture": "https://randomuser.me/api/portraits/men/12.jpg",
+    "email": "tanvir.ahmed@gmail.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["gym", "fitness buddy"],
+    "bio": "Gym partner who motivates me to stay consistent. We track workouts and share diet tips.",
+    "goal": 14,
+    "next_due_date": "2026-04-14"
+  },
+  {
+    "id": 6,
+    "name": "Farhana Islam",
+    "picture": "https://randomuser.me/api/portraits/women/25.jpg",
+    "email": "farhana.islam@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["family", "cousin"],
+    "bio": "My cousin who lives in Dhaka. We usually meet during family gatherings and festivals.",
+    "goal": 10,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 7,
+    "name": "Rafiul Haque",
+    "picture": "https://randomuser.me/api/portraits/men/47.jpg",
+    "email": "rafiul.haque@gmail.com",
+    "days_since_contact": 16,
+    "status": "overdue",
+    "tags": ["freelance", "developer"],
+    "bio": "Met through freelancing platforms. We discuss client work and share project opportunities.",
+    "goal": 14,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 8,
+    "name": "Mim Akter",
+    "picture": "https://randomuser.me/api/portraits/women/30.jpg",
+    "email": "mim.akter@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["neighbor", "friend"],
+    "bio": "Neighbor and good friend. We often chat in the evenings and share daily life updates.",
+    "goal": 12,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 9,
+    "name": "Shakib Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/21.jpg",
+    "email": "shakib.hossain@gmail.com",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["cricket", "teammate"],
+    "bio": "We play cricket together on weekends. Great teammate and always brings energy to the game.",
+    "goal": 12,
+    "next_due_date": "2026-04-16"
+  },
+  {
+    "id": 10,
+    "name": "Jannatul Ferdous",
+    "picture": "https://randomuser.me/api/portraits/women/55.jpg",
+    "email": "jannatul.ferdous@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["online friend", "design"],
+    "bio": "Met online through a design community. We exchange UI/UX ideas and feedback on projects.",
+    "goal": 10,
+    "next_due_date": "2026-04-23"
+  }
+]
