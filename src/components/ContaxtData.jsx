@@ -1,12 +1,27 @@
 'use client';
 
 import React, { createContext, useEffect, useState } from 'react';
+import { IoCall } from 'react-icons/io5';
+import { MdTextsms } from 'react-icons/md';
+import { FaVideo } from 'react-icons/fa';
 
 export const FriendsContext = createContext();
+
+const collingArray = [
+  { id: 1, collName: 'Call', title: 'Had a Quick Call', icon: <IoCall /> },
+  {
+    id: 2,
+    collName: 'Text',
+    title: 'Asked for Career Advice',
+    icon: <MdTextsms />,
+  },
+  { id: 3, collName: 'Video', title: 'Had a Video Meeting', icon: <FaVideo /> },
+];
 
 const ContextData = ({ children }) => {
   const [data, setData] = useState([]);
   const [selected, setSelected] = useState([]);
+  const [history, setHistory] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,7 +33,6 @@ const ContextData = ({ children }) => {
     fetchData();
   }, []);
 
-  // Click Handler for Card
   const handleCard = id => {
     const isExistCard = selected.find(item => item.id === id);
 
@@ -31,8 +45,24 @@ const ContextData = ({ children }) => {
     }
   };
 
+  const handleHistoryFunction = callId => {
+    const selectedCall = collingArray.find(item => item.id === callId);
+
+    const newHistory = {
+      id: Date.now(),
+      type: selectedCall.collName,
+      title: selectedCall.title,
+      icon: selectedCall.icon,
+      time: new Date().toLocaleString(),
+    };
+
+    setHistory(prev => [newHistory, ...prev]);
+  };
+
   return (
-    <FriendsContext.Provider value={{ data, setData, handleCard }}>
+    <FriendsContext.Provider
+      value={{ data, handleCard, handleHistoryFunction, history }}
+    >
       {children}
     </FriendsContext.Provider>
   );

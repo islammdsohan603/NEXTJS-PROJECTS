@@ -3,26 +3,20 @@
 import React, { useContext } from 'react';
 import { useParams } from 'next/navigation';
 import { FriendsContext } from '@/components/ContaxtData';
+
 import Image from 'next/image';
 
 // icons
 import { MdOutlineSnooze } from 'react-icons/md';
 import { FaBoxArchive } from 'react-icons/fa6';
 import { RiDeleteBinLine } from 'react-icons/ri';
-import { IoCall } from 'react-icons/io5';
-import { MdTextsms } from 'react-icons/md';
-import { FaVideo } from 'react-icons/fa';
+
+import History from '@/components/History';
 
 const buttonsArray = [
   { title: 'Snooze 2 Weeks', icons: <MdOutlineSnooze /> },
   { title: 'Archive', icons: <FaBoxArchive /> },
   { title: 'Delete', icons: <RiDeleteBinLine /> },
-];
-
-const collingArray = [
-  { collName: 'Call', lavle: <IoCall /> },
-  { collName: 'Text', lavle: <MdTextsms /> },
-  { collName: 'Video', lavle: <FaVideo /> },
 ];
 
 const SingleFriend = () => {
@@ -40,7 +34,7 @@ const SingleFriend = () => {
   }
 
   return (
-    <div className="bg-gradient-to-br from-base-100 to-base-200 py-10 min-h-[90vh]">
+    <div className="bg-linear-to-br from-base-100 to-base-200 py-10 min-h-[90vh]">
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* LEFT PROFILE CARD */}
@@ -61,7 +55,7 @@ const SingleFriend = () => {
               {friend.tags.map((item, index) => (
                 <span
                   key={index}
-                  className="bg-gradient-to-r from-green-200 to-green-300 px-4 py-1.5 rounded-full text-xs font-semibold shadow-sm"
+                  className="bg-linear-to-r from-green-200 to-green-300 px-4 py-1.5 rounded-full text-xs font-semibold shadow-sm"
                 >
                   {item}
                 </span>
@@ -91,7 +85,7 @@ const SingleFriend = () => {
               {buttonsArray.map((btn, index) => (
                 <button
                   key={index}
-                  className={`w-full btn rounded-xl shadow-md hover:scale-[1.03] hover:-translate-y-[2px] transition-all duration-200
+                  className={`w-full btn rounded-xl shadow-md hover:scale-[1.03] hover:-translate-y-0.5 transition-all duration-200
                   ${
                     btn.title === 'Delete'
                       ? 'text-red-500 hover:bg-red-100'
@@ -159,20 +153,9 @@ const SingleFriend = () => {
             </div>
 
             {/* CALL / TEXT / VIDEO */}
-            <div className="bg-base-200/70 backdrop-blur-md border border-base-300 p-6 rounded-3xl shadow-lg">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {collingArray.map((coll, index) => (
-                  <div
-                    key={index}
-                    className="bg-base-100 p-8 rounded-3xl cursor-pointer flex flex-col items-center justify-center shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-300"
-                  >
-                    <h1 className="text-3xl text-primary mb-2">{coll.lavle}</h1>
-                    <h1 className="font-semibold text-neutral-600">
-                      {coll.collName}
-                    </h1>
-                  </div>
-                ))}
-              </div>
+
+            <div className="col-span-3">
+              <History />
             </div>
           </div>
         </div>
