@@ -6,6 +6,7 @@ export const FriendsContext = createContext();
 
 const ContextData = ({ children }) => {
   const [data, setData] = useState([]);
+  const [selected, setSelected] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,8 +18,21 @@ const ContextData = ({ children }) => {
     fetchData();
   }, []);
 
+  // Click Handler for Card
+  const handleCard = id => {
+    const isExistCard = selected.find(item => item.id === id);
+
+    if (isExistCard) {
+      alert('Already Added ❌');
+    } else {
+      const friend = data.find(item => item.id === id);
+      setSelected([...selected, friend]);
+      alert('Added Successfully ✅');
+    }
+  };
+
   return (
-    <FriendsContext.Provider value={{ data, setData }}>
+    <FriendsContext.Provider value={{ data, setData, handleCard }}>
       {children}
     </FriendsContext.Provider>
   );
