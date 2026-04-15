@@ -8,14 +8,27 @@ import { FaVideo } from 'react-icons/fa';
 export const FriendsContext = createContext();
 
 const collingArray = [
-  { id: 1, collName: 'Call', title: 'Had a Quick Call', icon: <IoCall /> },
+  {
+    id: 1,
+    collName: 'Call',
+    title: 'Had a Quick Call',
+    icon: <IoCall />,
+    hidding: 'Meetup',
+  },
   {
     id: 2,
     collName: 'Text',
     title: 'Asked for Career Advice',
     icon: <MdTextsms />,
+    hidding: 'Text',
   },
-  { id: 3, collName: 'Video', title: 'Had a Video Meeting', icon: <FaVideo /> },
+  {
+    id: 3,
+    collName: 'Video',
+    title: 'Had a Video Meeting',
+    icon: <FaVideo />,
+    hidding: 'Video',
+  },
 ];
 
 const ContextData = ({ children }) => {
@@ -45,7 +58,7 @@ const ContextData = ({ children }) => {
     }
   };
 
-  const handleHistoryFunction = callId => {
+  const handleHistoryFunction = (callId, friendId) => {
     const selectedCall = collingArray.find(item => item.id === callId);
 
     const newHistory = {
@@ -58,7 +71,6 @@ const ContextData = ({ children }) => {
 
     setHistory(prev => [newHistory, ...prev]);
   };
-
   return (
     <FriendsContext.Provider
       value={{ data, handleCard, handleHistoryFunction, history }}
