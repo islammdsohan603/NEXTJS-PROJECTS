@@ -55,7 +55,6 @@ const MyNavLinks = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <>
-          {/* Overlay */}
           <div
             onClick={() => setIsOpen(false)}
             className="fixed inset-0 bg-black/30 backdrop-blur-sm z-40"
