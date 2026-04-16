@@ -14,8 +14,9 @@ const FrindsData = () => {
       <h1 className="text-2xl font-bold mb-4">Your Friends</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {data.length === 0 ? (
-          <div className="max-w-2xs mx-auto flex items-center justify-center">
-            <GridLoader />
+          <div className="min-h-[70vh] flex flex-col items-center justify-center gap-4 col-span-full">
+            <GridLoader color="#22c55e" />
+            <p className="text-sm text-neutral-500">Loading friends...</p>
           </div>
         ) : (
           data.map(friend => (

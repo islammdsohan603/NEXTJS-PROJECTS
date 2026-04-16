@@ -4,6 +4,7 @@ import React, { createContext, useEffect, useState } from 'react';
 import { IoCall } from 'react-icons/io5';
 import { MdTextsms } from 'react-icons/md';
 import { FaVideo } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 export const FriendsContext = createContext();
 
@@ -47,14 +48,16 @@ const ContextData = ({ children }) => {
   }, []);
 
   const handleCard = id => {
-    const isExistCard = selected.find(item => item.id === id);
+    const numericId = parseInt(id);
+
+    const isExistCard = selected.find(item => item.id === numericId);
 
     if (isExistCard) {
-      alert('Already Added ❌');
+      toast.error('Already Added ❌');
     } else {
-      const friend = data.find(item => item.id === id);
+      const friend = data.find(item => item.id === numericId);
       setSelected([...selected, friend]);
-      alert('Added Successfully ✅');
+      toast.success(`${friend.name} Successfully ✅`);
     }
   };
 
