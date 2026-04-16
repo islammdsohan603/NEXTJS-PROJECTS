@@ -37,7 +37,7 @@ const FrindsData = () => {
               <h2 className="text-lg font-semibold">{friend.name}</h2>
 
               <span className="text-sm font-semibold text-neutral-500">
-                {friend.days_since_contact}d ago
+                {friend.goal}d ago
               </span>
 
               <div className="flex items-center gap-6 justify-center">
