@@ -4,6 +4,7 @@ const catoriyItem = [
   { count: 10, title: 'Total Friends' },
   { count: 3, title: 'On Track' },
   { count: 6, title: 'Need Attention' },
+
 ]
 
 export default function Home() {

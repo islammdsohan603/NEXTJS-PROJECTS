@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💚 KeenKeeper
 
-## Getting Started
+A modern friendship management and interaction tracking web application built
+with Next.js.  
+KeenKeeper helps users keep track of meaningful relationships, log interactions,
+and visualize friendship activity.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Project Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+KeenKeeper is a personal relationship tracking system where users can:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Add and manage friends
+- Track days since last contact
+- Log interactions like calls, texts, and video meetings
+- View relationship analytics through charts and timeline history
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is built as a portfolio-level full-stack UI application using
+modern React and Next.js features.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- ⚛️ Next.js (App Router)
+- ⚛️ React.js
+- 🎨 Tailwind CSS
+- 📊 Recharts (Data Visualization)
+- 🔔 React Toastify (Notifications)
+- 🧠 Context API (State Management)
+- 📦 JavaScript (ES6+)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ✨ Key Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1. 👥 Friend Management System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Users can view a list of friends, track their details, and manage relationships
+easily.
+
+---
+
+### 2. 📅 Interaction Timeline
+
+Logs all interactions like calls, texts, and video meetings with timestamp
+history for better tracking.
+
+---
+
+### 3. 📊 Analytics Dashboard
+
+Visual representation of interaction types using charts (Pie Chart) to analyze
+communication patterns.
+
+---
+
+## 📌 Additional Features
+
+- Responsive UI (Mobile + Desktop)
+- Modern dashboard design
+- Toast notifications for user actions
+- Dynamic routing with Next.js
+- Clean component-based architecture
+
+---
+
+## 📷 Project Preview
+
+## Home Page
+
+![alt text](<Screenshot 2026-04-16 155016.png>)
+
+## All Friends List
+
+![alt text](<Screenshot 2026-04-16 155033.png>)
+
+## Single Friends Lisl
+
+![alt text](<Screenshot 2026-04-16 155051.png>)
+
+## Friendship analytics deteails
+
+![alt text](<Screenshot 2026-04-16 155051-1.png>)
+
+---
