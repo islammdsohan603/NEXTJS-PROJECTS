@@ -76,7 +76,8 @@ const TimeLinePage = () => {
                       {/* Text */}
                       <div>
                         <h1 className="font-semibold text-neutral-700">
-                          {item.type}
+                          {item.type} with
+                          <span> {item.name} </span>
                         </h1>
                         <p className="text-sm text-neutral-500">{item.title}</p>
                       </div>

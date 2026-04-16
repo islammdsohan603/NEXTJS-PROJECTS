@@ -20,7 +20,7 @@ const collingArray = [
   },
 ];
 
-const History = () => {
+const History = ({ friendName }) => {
   const { data, handleHistoryFunction, history } = useContext(FriendsContext);
 
   return (
@@ -29,7 +29,9 @@ const History = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {collingArray.map((coll, index) => (
             <div
-              onClick={() => handleHistoryFunction(coll.id)}
+              onClick={() =>
+                handleHistoryFunction(coll.id, coll.collName, friendName)
+              }
               key={index}
               className="bg-base-100 p-8 rounded-3xl cursor-pointer flex flex-col items-center justify-center shadow-md hover:shadow-xl hover:-translate-y-2 hover:scale-105 transition-all duration-300"
             >
@@ -42,7 +44,7 @@ const History = () => {
         </div>
       </div>
 
-      <div className="bg-base-200/70 backdrop-blur-md p-6 rounded-3xl shadow-lg">
+      {/* <div className="bg-base-200/70 backdrop-blur-md p-6 rounded-3xl shadow-lg">
         <div className="flex items-center justify-between">
           <h1 className="text-lg sm:text-2xl md:text-3xl font-bold">
             Recent Interactions
@@ -74,7 +76,7 @@ const History = () => {
             ))
           )}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -60,14 +60,18 @@ const ContextData = ({ children }) => {
     }
   };
 
-  const handleHistoryFunction = callId => {
+  const handleHistoryFunction = (callId, callName, friendName) => {
     const selectedCall = collingArray.find(item => item.id === callId);
+
     if (!selectedCall) return;
+
+    toast.success(`${callName} with ${friendName} ✅`);
 
     const newHistory = {
       id: Date.now(),
       type: selectedCall.collName,
       title: selectedCall.title,
+      name: friendName, // ✅ এখানে add করো
       icon: selectedCall.icon,
       time: new Date().toLocaleString(),
     };

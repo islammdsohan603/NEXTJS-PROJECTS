@@ -157,7 +157,7 @@ const SingleFriend = () => {
             {/* CALL / TEXT / VIDEO */}
 
             <div className="col-span-3">
-              <History />
+              <History friendName={friend.name} />
             </div>
           </div>
         </div>
