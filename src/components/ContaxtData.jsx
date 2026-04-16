@@ -34,7 +34,7 @@ const collingArray = [
 
 const ContextData = ({ children }) => {
   const [data, setData] = useState([]);
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = useState(null);
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
@@ -48,9 +48,8 @@ const ContextData = ({ children }) => {
   }, []);
 
   const handleCard = id => {
-    const numericId = parseInt(id);
-
-    const isExistCard = selected.find(item => item.id === numericId);
+    const parsentId = parseInt(id);
+    const isExistCard = selected.find(item => item.id === parsentId);
 
     if (isExistCard) {
       toast.error('Already Added ❌');
@@ -69,6 +68,7 @@ const ContextData = ({ children }) => {
       type: selectedCall.collName,
       title: selectedCall.title,
       icon: selectedCall.icon,
+
       time: new Date().toLocaleString(),
     };
 
