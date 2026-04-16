@@ -34,7 +34,7 @@ const collingArray = [
 
 const ContextData = ({ children }) => {
   const [data, setData] = useState([]);
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState([]);
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
@@ -43,40 +43,41 @@ const ContextData = ({ children }) => {
       const result = await res.json();
       setData(result);
     };
-
     fetchData();
   }, []);
 
   const handleCard = id => {
-    const parsentId = parseInt(id);
-    const isExistCard = selected.find(item => item.id === parsentId);
+    const numericId = parseInt(id);
+    const isExistCard = selected.find(item => item.id === numericId);
 
     if (isExistCard) {
       toast.error('Already Added ❌');
     } else {
       const friend = data.find(item => item.id === numericId);
+      if (!friend) return;
       setSelected([...selected, friend]);
-      toast.success(`${friend.name} Successfully ✅`);
+      toast.success(`${friend.name} Added Successfully ✅`);
     }
   };
 
   const handleHistoryFunction = callId => {
     const selectedCall = collingArray.find(item => item.id === callId);
+    if (!selectedCall) return;
 
     const newHistory = {
       id: Date.now(),
       type: selectedCall.collName,
       title: selectedCall.title,
       icon: selectedCall.icon,
-
       time: new Date().toLocaleString(),
     };
 
     setHistory(prev => [newHistory, ...prev]);
   };
+
   return (
     <FriendsContext.Provider
-      value={{ data, handleCard, handleHistoryFunction, history }}
+      value={{ data, selected, handleCard, handleHistoryFunction, history }}
     >
       {children}
     </FriendsContext.Provider>
