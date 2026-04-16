@@ -1,15 +1,22 @@
+'use client'
+
 import FrindsData from "@/components/FrindsData";
+import { FriendsContext } from "@/components/ContaxtData";
+import { useContext } from "react";
 
-const catoriyItem = [
-  { count: 10, title: 'Total Friends' },
-  { count: 3, title: 'On Track' },
-  { count: 6, title: 'Need Attention' },
 
-]
 
 export default function Home() {
 
+  const { data, history } = useContext(FriendsContext)
 
+
+  const catoriyItem = [
+    { title: "Total Friends", count: data.length },
+    { title: "On Track", count: data.filter(item => item.status === 'on-track').length },
+    { title: "Need Attention", count: data.filter(item => item.status === 'overdue' || item.status === 'almost due').length },
+    { title: "Need Attention", count: history.length },
+  ]
 
   return (
     <div className="min-h-screen py-10">
@@ -28,8 +35,8 @@ export default function Home() {
 
         {/* Cartoriy */}
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 my-6">
-          {/* maping  */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 my-6">
+
           {
             catoriyItem.map((cotariy, index) => (
               <div key={index} className="bg-base-200 p-6 rounded-2xl shadow-2xs shadow-blue-100 flex flex-col items-center justify-center">
