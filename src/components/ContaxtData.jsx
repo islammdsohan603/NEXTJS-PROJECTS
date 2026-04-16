@@ -58,7 +58,7 @@ const ContextData = ({ children }) => {
     }
   };
 
-  const handleHistoryFunction = (callId, friendId) => {
+  const handleHistoryFunction = callId => {
     const selectedCall = collingArray.find(item => item.id === callId);
 
     const newHistory = {

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { IoCall } from 'react-icons/io5';
 import { MdTextsms } from 'react-icons/md';
 import { FaVideo } from 'react-icons/fa';
+import { FaHistory } from 'react-icons/fa';
 
 import { FriendsContext } from './ContaxtData';
 
@@ -46,7 +47,10 @@ const History = () => {
           <h1 className="text-lg sm:text-2xl md:text-3xl font-bold">
             Recent Interactions
           </h1>
-          <button className="btn"> Full History </button>
+          <button className="btn">
+            {' '}
+            <FaHistory /> <FaHistory /> Full History{' '}
+          </button>
         </div>
 
         <div className="mt-6 space-y-3">
