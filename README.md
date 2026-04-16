@@ -82,7 +82,7 @@ communication patterns.
 
 ## Friendship analytics deteails
 
-![alt text](<Screenshot 2026-04-16 155051-1.png>)
+![alt text](<Screenshot 2026-04-16 155112.png>)
 
 ---
 
