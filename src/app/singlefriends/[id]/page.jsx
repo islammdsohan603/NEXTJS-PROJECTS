@@ -81,6 +81,8 @@ const SingleFriend = () => {
               {friend.bio}
             </p>
 
+            <span> {friend.email} </span>
+
             <div className="flex w-full flex-col gap-3">
               {buttonsArray.map((btn, index) => (
                 <button
