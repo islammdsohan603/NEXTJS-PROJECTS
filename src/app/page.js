@@ -15,7 +15,7 @@ export default function Home() {
     { title: "Total Friends", count: data.length },
     { title: "On Track", count: data.filter(item => item.status === 'on-track').length },
     { title: "Need Attention", count: data.filter(item => item.status === 'overdue' || item.status === 'almost due').length },
-    { title: "Need Attention", count: history.length },
+    { title: "Total Interactions", count: history.length }, ,
   ]
 
   return (

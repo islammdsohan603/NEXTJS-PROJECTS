@@ -43,40 +43,6 @@ const History = ({ friendName }) => {
           ))}
         </div>
       </div>
-
-      {/* <div className="bg-base-200/70 backdrop-blur-md p-6 rounded-3xl shadow-lg">
-        <div className="flex items-center justify-between">
-          <h1 className="text-lg sm:text-2xl md:text-3xl font-bold">
-            Recent Interactions
-          </h1>
-          <button className="btn">
-            {' '}
-            <FaHistory /> Full History{' '}
-          </button>
-        </div>
-
-        <div className="mt-6 space-y-3">
-          {history.length === 0 ? (
-            <p className="text-neutral-500 text-center">No history yet</p>
-          ) : (
-            history.map(item => (
-              <div
-                key={item.id}
-                className="bg-base-100 p-4 rounded-xl shadow flex items-center justify-between hover:shadow-md transition"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="text-orange-400 text-2xl">{item.icon}</div>
-                  <div>
-                    <h1 className="font-semibold">{item.type}</h1>
-                    <p className="text-sm text-neutral-500">{item.title}</p>
-                  </div>
-                </div>
-                <span className="text-xs text-neutral-400">{item.time}</span>
-              </div>
-            ))
-          )}
-        </div>
-      </div> */}
     </div>
   );
 };
