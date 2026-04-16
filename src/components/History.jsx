@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { IoCall } from 'react-icons/io5';
 import { MdTextsms } from 'react-icons/md';
 import { FaVideo } from 'react-icons/fa';
-import { FaHistory } from 'react-icons/fa';
 
 import { FriendsContext } from './ContaxtData';
 
