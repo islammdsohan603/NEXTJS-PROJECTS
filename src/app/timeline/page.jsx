@@ -6,9 +6,15 @@ import { FriendsContext } from '@/components/ContaxtData';
 const TimeLinePage = () => {
   const { data, history } = useContext(FriendsContext);
   const [filter, setFilter] = useState('all');
+  const [search, setSearch] = useState('');
 
-  const filterHistory =
-    filter === 'all' ? history : history.filter(item => item.type === filter);
+  const filterHistory = history
+    .filter(item => filter === 'all' || item.type === filter)
+    .filter(
+      item =>
+        item.title.toLowerCase().includes(search.toLowerCase()) ||
+        item.type.toLowerCase().includes(search.toLowerCase()),
+    );
 
   return (
     <div className="min-h-[90vh] py-12 bg-linear-to-br from-base-100 to-base-200">
@@ -18,25 +24,39 @@ const TimeLinePage = () => {
           Timeline
         </h1>
 
-        {/* Filter */}
+        {/* Filter && Search */}
 
-        <div className="my-6 pb-10">
-          <select
-            value={filter}
-            onChange={e => setFilter(e.target.value)}
-            className="select select-bordered rounded-xl shadow-md focus:outline-primary text-xl font-bold"
-          >
-            <option value="all">All</option>
-            <option value="Call">Call</option>
-            <option value="Text">Text</option>
-            <option value="Video">Video</option>
-          </select>
+        <div className="my-6 pb-10 flex flex-col md:flex-row items-center gap-6">
+          <div>
+            <select
+              value={filter}
+              onChange={e => setFilter(e.target.value)}
+              className="select select-bordered rounded-xl shadow-md focus:outline-primary w-2xs text-xl font-bold"
+            >
+              <option value="all">All</option>
+              <option value="Call">Call</option>
+              <option value="Text">Text</option>
+              <option value="Video">Video</option>
+            </select>
+          </div>
+
+          {/* Search */}
+
+          <div>
+            <input
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+              type="search"
+              placeholder="Search"
+              className="w-2xs text-xl font-bold  p-4 rounded-2xl shadow-2xs border shadow-blue-200 focus:border-2 border-blue-400 "
+            />
+          </div>
         </div>
 
         {/* Timeline */}
         <div className="relative border-l-2 border-base-300 pt-6 space-y-8">
-          {history.length === 0 ? (
-            <p className="text-neutral-500">No activity yet</p>
+          {filterHistory.length === 0 ? (
+            <p>No result found 🔍</p>
           ) : (
             filterHistory.map(item => (
               <div key={item.id} className="relative group">

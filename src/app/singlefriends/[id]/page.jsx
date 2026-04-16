@@ -38,7 +38,7 @@ const SingleFriend = () => {
       <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {/* LEFT PROFILE CARD */}
-          <div className="bg-base-200/60 backdrop-blur-lg border border-base-300 p-6 rounded-3xl col-span-1 space-y-4 flex flex-col items-center justify-center shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
+          <div className="bg-base-200/60 backdrop-blur-lg border border-base-300 p-6 rounded-3xl col-span-1 space-y-4 flex flex-col items-center justify-start shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
             <Image
               src={friend.picture}
               alt="Image"

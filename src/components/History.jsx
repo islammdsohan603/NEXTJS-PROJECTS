@@ -49,7 +49,7 @@ const History = () => {
           </h1>
           <button className="btn">
             {' '}
-            <FaHistory /> <FaHistory /> Full History{' '}
+            <FaHistory /> Full History{' '}
           </button>
         </div>
 
