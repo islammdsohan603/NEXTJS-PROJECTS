@@ -86,4 +86,4 @@ communication patterns.
 
 ---
 
-## Live links : https://nextjs-for-frist-projects.netlify.app/
+## Live links : https://nextjs-projects-ten.vercel.app/
